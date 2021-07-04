@@ -15,6 +15,7 @@
 		2D1E8FD12691D2420065DAA9 /* TapListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E8FD02691D2420065DAA9 /* TapListViewModel.swift */; };
 		2D1E8FD32691D2940065DAA9 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E8FD22691D2940065DAA9 /* ListView.swift */; };
 		2D1E8FD52691D29A0065DAA9 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E8FD42691D29A0065DAA9 /* DetailedView.swift */; };
+		2D1E8FD72691DAC10065DAA9 /* TapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E8FD62691DAC10065DAA9 /* TapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2D1E8FD02691D2420065DAA9 /* TapListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListViewModel.swift; sourceTree = "<group>"; };
 		2D1E8FD22691D2940065DAA9 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		2D1E8FD42691D29A0065DAA9 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		2D1E8FD62691DAC10065DAA9 /* TapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2D1E8FBD2691D1490065DAA9 /* TapItApp.swift */,
 				2D1E8FCC2691D18B0065DAA9 /* TapModel.swift */,
 				2D1E8FCE2691D1CC0065DAA9 /* DataService.swift */,
+				2D1E8FD62691DAC10065DAA9 /* TapViewModel.swift */,
 				2D1E8FD02691D2420065DAA9 /* TapListViewModel.swift */,
 				2D1E8FD22691D2940065DAA9 /* ListView.swift */,
 				2D1E8FD42691D29A0065DAA9 /* DetailedView.swift */,
@@ -154,6 +157,7 @@
 				2D1E8FD32691D2940065DAA9 /* ListView.swift in Sources */,
 				2D1E8FCD2691D18B0065DAA9 /* TapModel.swift in Sources */,
 				2D1E8FD52691D29A0065DAA9 /* DetailedView.swift in Sources */,
+				2D1E8FD72691DAC10065DAA9 /* TapViewModel.swift in Sources */,
 				2D1E8FCF2691D1CC0065DAA9 /* DataService.swift in Sources */,
 				2D1E8FD12691D2420065DAA9 /* TapListViewModel.swift in Sources */,
 			);
