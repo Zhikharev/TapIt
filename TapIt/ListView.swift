@@ -45,40 +45,40 @@ struct ListView: View {
 
     @State private var idx = 0
     @State private var showDetail = false
+    @State private var selectedTap: TapModel? = nil
     
     var body: some View {
         VStack(spacing: 20) {
-            ForEach(viewModel.items.indices, id: \.self) { idx in
-                //NavigationLink(
-                //    destination: DetailedView(item: item),
-                //    label: {
-                        HStack {
-                            Text(viewModel.items[idx].item.name)
-                            Button(action: {
-                                let old = viewModel.items[idx].item
-                                let new = TapModel(id: old.id, name: old.name, value: old.value + 1)
-                                viewModel.tap(new: new)
-                            }, label: {
-                                Text("+1")
-                            })
-                        }
-                        .padding()
-                        .background (
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.gray.opacity(0.4))
-                        )
-                        .onTapGesture {
-                            //self.selectedTap = viewModel.items[idx]
-                            self.idx = idx
-                            self.showDetail.toggle()
-                        }
-                  //  })
-                    
+            //ForEach(viewModel.items.indices, id: \.self) { idx in
+            //ForEach(viewModel.items, id: \.self.id) { item in
+            ForEach(Array(viewModel.items.enumerated()), id: \.self.offset) { (idx, item) in
+                HStack {
+                    Text(item.name)
+                    Button(action: {
+                        let old = item
+                        let new = TapModel(id: old.id, name: old.name, value: old.value + 1)
+                        viewModel.tap(new: new)
+                    }, label: {
+                        Text("+1")
+                    })
+                }
+                .padding()
+                .background (
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.gray.opacity(0.4))
+                )
+                .onTapGesture {
+                    self.selectedTap = item
+                    self.idx = idx
+                    self.showDetail.toggle()
+                }
+
+                
             }
         }
         .background(
             NavigationLink(
-                destination: DetailedView(item: $viewModel.items[idx]),
+                destination: DetailedView(item: viewModel.items[idx]),
                 isActive: $showDetail,
                 label: { EmptyView()})
         )
